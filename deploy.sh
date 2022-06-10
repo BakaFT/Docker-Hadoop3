@@ -6,10 +6,10 @@ echo "Creating containers"
 #namenode
 docker run -d --hostname nnode1 -P --name namenode -p 9870:9870 --network hadoop --ip 192.168.33.10  bakaft/hadoop:latest
 #secondary namenode
-docker run -d --hostname nnode2 --name secnamenode -p 8088:8088 -p 19888:19888 --network hadoop --ip 192.168.33.11  bakaft/hadoop:latest
+docker run -d --hostname nnode2 --name secnamenode --network hadoop --ip 192.168.33.11  bakaft/hadoop:latest
 
 #resmgr
-docker run -d --hostname mgr --name resmgr --network hadoop --ip 192.168.33.12 bakaft/hadoop:latest
+docker run -d --hostname mgr --name resmgr -p 8088:8088 -p 19888:19888 --network hadoop --ip 192.168.33.12 bakaft/hadoop:latest
 
 #datanode 1
 docker run -d --hostname dnode1 --name datanode1 --network hadoop --ip 192.168.33.13 bakaft/hadoop:latest
