@@ -1,0 +1,1 @@
+docker build ./Hadoop -t 'bakaft/hadoop:cluster'

@@ -1,6 +1,4 @@
 # Cluster
-
-
 subnet 192.168.33.0/24
 
 gateway 192.168.33.1

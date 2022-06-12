@@ -22,7 +22,7 @@ CMD ["/usr/sbin/sshd", "-D"]
 # Install Oracle JDK
 RUN wget https://github.com/frekele/oracle-java/releases/download/8u212-b10/jdk-8u212-linux-x64.tar.gz && \
     tar -xzvf jdk-8u212-linux-x64.tar.gz && \
-    mv jdk1.8.0_212 /usr/local/jdk1.8 
+    mv jdk1.8.0_212 /usr/local/jdk1.8 && \
     rm jdk-8u212-linux-x64.tar.gz
 
 
